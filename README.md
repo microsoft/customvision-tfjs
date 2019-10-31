@@ -1,3 +1,54 @@
+# customvision-tfjs
+NPM package for TensorFlow.js models exported from Custom Vision Service
+
+## Install
+```sh
+npm install customvision-tfjs
+```
+
+Or, if you would like to use CDN,
+
+```html
+<script src="https://unpkg.com/customvision-tfjs"></script>
+```
+
+## Usage
+
+```html
+<img id="image" src="test_image.jpg" />
+```
+
+### Classification
+```js
+import * as cvstfjs from 'customvision-tfjs';
+
+let model = new cvstfjs.ClassificationModel();
+await model.loadModelAsync('model.json');
+const image = document.getElementById('image');
+const result = await model.executeAsync(image);
+```
+
+The result is a 1D-array of probabilities.
+
+### Object Detection
+```js
+import * as cvstfjs from 'customvision-tfjs';
+
+let model = new cvstfjs.ObjectDetectionModel();
+await model.loadModelAsync('model.json');
+const image = document.getElementById('image');
+const result = await model.executeAsync(image);
+```
+
+The result has 3 arrays.
+```js
+
+[
+	[[0.1, 0.3, 0.4, 0.3], [0.2, 0.4, 0.8, 0.9]], // bounding boxes (x1, y1, x2, y2)
+	[0.2, 0.3], // probabilities
+	[1, 4] // class ids
+]
+```
 
 # Contributing
 
