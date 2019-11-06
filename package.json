@@ -1,5 +1,5 @@
 {
-  "name": "customvision-tfjs",
+  "name": "@microsoft/customvision-tfjs",
   "version": "1.0.1",
   "description": "Library for Tensorflow.js models exported from customvision.ai",
   "main": "lib/index.js",
@@ -42,6 +42,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/shonohs/customvision-tfjs.git"
+    "url": "https://github.com/microsoft/customvision-tfjs.git"
   }
 }

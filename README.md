@@ -3,13 +3,13 @@ NPM package for TensorFlow.js models exported from Custom Vision Service
 
 ## Install
 ```sh
-npm install customvision-tfjs
+npm install @microsoft/customvision-tfjs
 ```
 
 Or, if you would like to use CDN,
 
 ```html
-<script src="https://unpkg.com/customvision-tfjs"></script>
+<script src="https://unpkg.com/@microsoft/customvision-tfjs"></script>
 ```
 
 ## Usage
@@ -20,7 +20,7 @@ Or, if you would like to use CDN,
 
 ### Classification
 ```js
-import * as cvstfjs from 'customvision-tfjs';
+import * as cvstfjs from '@microsoft/customvision-tfjs';
 
 let model = new cvstfjs.ClassificationModel();
 await model.loadModelAsync('model.json');
@@ -32,7 +32,7 @@ The result is a 1D-array of probabilities.
 
 ### Object Detection
 ```js
-import * as cvstfjs from 'customvision-tfjs';
+import * as cvstfjs from '@microsoft/customvision-tfjs';
 
 let model = new cvstfjs.ObjectDetectionModel();
 await model.loadModelAsync('model.json');
