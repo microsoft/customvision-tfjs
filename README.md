@@ -9,6 +9,7 @@ npm install @microsoft/customvision-tfjs
 Or, if you would like to use CDN,
 
 ```html
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.2/dist/tf.min.js"></script>
 <script src="https://unpkg.com/@microsoft/customvision-tfjs"></script>
 ```
 
