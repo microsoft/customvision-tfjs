@@ -1,6 +1,8 @@
 # customvision-tfjs
 NPM package for TensorFlow.js models exported from Custom Vision Service
 
+This package is for web browsers. If you are looking for a library to run on Node.js environment, please use [customvision-tfjs-node](https://github.com/microsoft/customvision-tfjs-node).
+
 ## Install
 ```sh
 npm install @microsoft/customvision-tfjs
