@@ -11,7 +11,7 @@ npm install @microsoft/customvision-tfjs
 Or, if you would like to use CDN,
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.2/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.1.0/dist/tf.min.js"></script>
 <script src="https://unpkg.com/@microsoft/customvision-tfjs"></script>
 ```
 
@@ -52,6 +52,9 @@ The result has 3 arrays.
 	[1, 4] // class ids
 ]
 ```
+
+# References
+* [sample scripts](https://github.com/Azure-Samples/customvision-export-samples)
 
 # Contributing
 
