@@ -1,6 +1,6 @@
 {
   "name": "@microsoft/customvision-tfjs",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Library for Tensorflow.js models exported from customvision.ai",
   "main": "lib/index.js",
   "unpkg": "lib/index.umd.js",
