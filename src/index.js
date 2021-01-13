@@ -9,6 +9,7 @@ class Model {
     this.model = await tf.loadGraphModel(modelUrl, options);
     this.input_size = this.model.inputs[0].shape[1];
     this.is_new_od_model = this.model.outputs.length == 3;
+    this.is_rgb_input = this.model.metadata['Image.BitmapPixelFormat'] == 'Rgb8' || this.is_new_od_model;
   }
 
   dispose() {
@@ -35,7 +36,7 @@ export class ObjectDetectionModel extends Model {
 
   _preprocess(image) {
     const rgb_image = tf.image.resizeBilinear(image.expandDims().toFloat(), [this.input_size, this.input_size]);
-    return this.is_new_od_model ? rgb_image : rgb_image.reverse(-1); // RGB->BGR for old models
+    return this.is_rgb_input ? rgb_image : rgb_image.reverse(-1); // RGB->BGR for old models
   }
 
   async _postprocess(outputs) {
@@ -104,6 +105,7 @@ export class ClassificationModel extends Model {
     const left = h > w ? 0 : (w - h) / 2;
     const size = Math.min(h, w);
     const rgb_image = tf.image.cropAndResize(image.expandDims().toFloat(), [[top / h, left / w, (top+size) / h, (left+size) / w]], [0], [this.input_size, this.input_size]);
-    return rgb_image.reverse(-1); // RGB -> BGR;
+
+    return this.is_rgb_input ? rgb_image : rgb_image.reverse(-1); // RGB->BGR for old models
   }
 }
