@@ -29,16 +29,16 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "^7.6.4",
-    "@babel/core": "^7.6.4",
-    "@babel/plugin-transform-runtime": "^7.6.2",
-    "@babel/preset-env": "^7.6.3",
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
     "mocha": "^6.2.2",
     "rollup": "^1.26.0"
   },
   "dependencies": {
-    "@babel/runtime": "^7.6.3",
-    "@tensorflow/tfjs": "^2.1.0"
+    "@babel/runtime": "^7.12.5",
+    "@tensorflow/tfjs": "^2.8.3"
   },
   "repository": {
     "type": "git",
