@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.12.5",
-    "@tensorflow/tfjs": "^2.8.3"
+    "@tensorflow/tfjs": "^3.12.0"
   },
   "repository": {
     "type": "git",
